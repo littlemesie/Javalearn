@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * Created by 2019-03-17 20:06
- * 自定义@interface
+ * 自定义简单的@interface
  * @author: mesie
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
