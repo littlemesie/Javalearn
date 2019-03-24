@@ -10,33 +10,6 @@ import java.util.List;
  */
 public class TreeParent<E> {
 
-    // 节点类
-    public static class Node<T>{
-        T data;
-        //记录器父节点的位置
-        int parent;
-        public Node(){
-
-        }
-
-        public Node(T data) {
-            this.data = data;
-        }
-
-        public Node(T data, int parent) {
-            this.data = data;
-            this.parent = parent;
-        }
-
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "data=" + data +
-                    ", parent=" + parent +
-                    '}';
-        }
-    }
-
     private final int DEFAULT_TREE_SIZE = 100;
     private int treeSize = 0;
     //使用一个Node数组来记录该树里的所有节点
@@ -135,11 +108,11 @@ public class TreeParent<E> {
 
     public static void main(String[] args) {
         TreeParent<String> tp = new TreeParent<String>("root");
-        TreeParent.Node root = tp.root();
+        Node root = tp.root();
         System.out.println(root);
         tp.addNode("节点1",root);
         tp.addNode("节点2",root);
-        List<TreeParent.Node<String>> nodes = tp.children(root);
+        List<Node<String>> nodes = tp.children(root);
         System.out.println("根节点的第一个子节点：" + nodes.get(0));
         tp.addNode("节点3",nodes.get(0));
         System.out.println("此树的深度：" + tp.deep());
