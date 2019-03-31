@@ -1,4 +1,4 @@
-package cn.mesie.thread;
+package cn.mesie.thread.base;
 
 /**
  * Created by 2018/10/4 16:39
@@ -20,7 +20,7 @@ public class MyThread01 implements Runnable {
         Thread mt = new Thread(new MyThread01());
         //启动线程
         mt.start();
-        //住线程任务
+        //主线程任务
         for (int i = 1000;i < 1010;i++){
             System.out.println(Thread.currentThread().getName() + ":" + i);
         }

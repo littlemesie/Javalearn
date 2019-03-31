@@ -1,4 +1,4 @@
-package cn.mesie.thread;
+package cn.mesie.thread.base;
 
 /**
  * Created by 2018/10/4 16:29
@@ -18,9 +18,11 @@ public class MyThread extends Thread {
     public static void main(String[] args) {
         //创建线程
         MyThread mt = new MyThread();
+        MyThread mt1 = new MyThread();
         //启动线程
         mt.start();
-        //住线程任务
+        mt1.start();
+        //主线程任务
         for (int i = 1000;i < 1010;i++){
             System.out.println(Thread.currentThread().getName() + ":" + i);
         }

@@ -1,4 +1,4 @@
-package cn.mesie.thread;
+package cn.mesie.thread.base;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -33,7 +33,7 @@ public class MyThread02 implements Callable<Integer> {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        //住线程任务
+        //主线程任务
         for (int i = 1000;i < 1010;i++){
             System.out.println(Thread.currentThread().getName() + ":" + i);
         }
