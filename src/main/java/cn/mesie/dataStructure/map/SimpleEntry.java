@@ -1,4 +1,4 @@
-package cn.mesie.collections;
+package cn.mesie.dataStructure.map;
 
 import java.util.Map;
 

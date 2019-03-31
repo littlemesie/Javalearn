@@ -1,4 +1,4 @@
-package cn.mesie.collections;
+package cn.mesie.dataStructure.map;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -72,5 +72,13 @@ public class Set2Map<K , V> extends HashSet<SimpleEntry<K , V>> {
         return super.size();
     }
 
+    public static void main(String[] args) {
+        Set2Map<String, Object> set2Map = new Set2Map<>();
+        set2Map.put("name", "mesie");
+        set2Map.put("sex", "man");
+        set2Map.put("age", "18");
+        System.out.println(set2Map.size());
+        System.out.println(set2Map.get("name"));
+    }
 
 }
