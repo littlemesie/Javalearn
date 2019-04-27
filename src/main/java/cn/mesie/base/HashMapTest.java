@@ -13,10 +13,10 @@ public class HashMapTest {
 
     public static void main(String[] args) {
         Map<String, Integer> map = new HashMap<>();
-        map.put("1", 1);
-        map.put("2", 2);
-        map.put("3", 3);
-        map.put("4", 4);
+        map.put("1", 5);
+        map.put("2", 6);
+        map.put("3", 7);
+        map.put("4", 8);
 
         Iterator<Map.Entry<String, Integer>> entryIterator = map.entrySet().iterator();
         while (entryIterator.hasNext()) {
@@ -33,7 +33,10 @@ public class HashMapTest {
         }
 
         System.out.println("=============");
+        for(String key : map.keySet()){
+            System.out.println("key=" + key + " value=" + map.get(key));
 
+        }
 
     }
 }
